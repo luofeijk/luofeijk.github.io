@@ -13,15 +13,93 @@
   
   </style>
 
+  <!-- jQuery -->
+  <script src="./js/jquery.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script src="./js/bootstrap.min.js"></script>
+  
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/template.css">
+
 </head>
 
 <body>
+
+  <img src="./images/image_05.jpg" width=100% height="200" />
+
+  <nav class="navbar navbar-default" style="background-color: #e3f2fd">
+  <div class="container-fluid">
+    <!-----
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">首页</a>
+    </div>
+    ---->
+    <ul class="nav navbar-nav">
+      <li><a href="#"><b>首页</b></a></li>
+      <li><a href="#"><b>关于越澄</b></a></li>
+      <li><a href="#"><b>阳澄湖大闸蟹文化企业文化</b></a></li>
+      <li><a href="#"><b>公司动态</b></a></li>
+      <li><a href="#"><b>人才招聘</b></a></li>    
+      <li><a href="#"><b>合作洽谈</b></a></li>  
+    </ul>
+  </div>
+  </nav>
+<!--
   <div id="slideShowImages" style="weight:10% height:10px">
     <img src="./images/image_01.jpg" alt="Slide 1" width="1000" height="300" />
     <img src="./images/image_02.jpg" alt="Slide 2" width="1000" height="300" />
     <img src="./images/image_03.jpg" alt="Slide 3" width="1000" height="300" />
   </div>  
   <script src="./js/slideShow.js"></script>
+-->
+<!-- Half Page Image Background Carousel Header -->
+  <header id="myCarousel" class="carousel slide" width=80%>
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+      <!-- Wrapper for Slides -->
+      <div class="carousel-inner">
+          <div class="item active">
+              <!-- Set the first background image using inline CSS below. -->
+              <div class="fill"><img src="./images/image_01.jpg" alt="Slide 1" width="100%" height="300" /></div>
+          </div>
+          <div class="item">
+              <!-- Set the second background image using inline CSS below. -->
+              <div class="fill"><img src="./images/image_02.jpg" alt="Slide 2" width="100%" height="300" /></div>
+          </div>
+          <div class="item">
+              <!-- Set the third background image using inline CSS below. -->
+              <div class="fill"><img src="./images/image_03.jpg" alt="Slide 3" width="100%" height="300" /></div>
+                <!--                
+                <div class="carousel-caption">
+                    <h2>Caption 3</h2>
+                </div>
+                -->
+          </div>
+      </div>
+
+      <!-- Controls -->
+      <!--
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+          <span class="icon-prev"></span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+          <span class="icon-next"></span>
+      </a>
+      -->
+
+  </header>
+
+  <script>
+  $('.carousel').carousel({
+      interval: 3000 //changes the speed
+  })
+  </script>
+  
 </body>
 
 </html>
