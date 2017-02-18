@@ -1,39 +1,29 @@
 <!DOCTYPE html>
 <html>
-<title>W3.CSS</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="/lib/w3.css">
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge"> <!-- For intranet testing only, remove in production. -->
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+  <title>Slide Show</title>
+  <style>
+    #slideShowImages { /* The following CSS rules are optional. */
+      border: 1px gray solid;
+      background-color: lightgray;
+    }   
+  
+  </style>
+
+</head>
+
 <body>
-
-<h2 class="w3-center w3-section">Manual Slideshow</h2>
-
-<div class="w3-content w3-display-container">
-  <img class="mySlides w3-animate-fading" src="./images/image_01.jpg" style="width:50% height:50%">
-  <img class="mySlides w3-animate-fading" src="./images/image_02.jpg" style="width:50% height:50%">
-  <img class="mySlides w3-animate-fading" src="./images/image_03.jpg" style="width:50% height:50%">
-  <img class="mySlides w3-animate-fading" src="./images/image_04.jpg" style="width:50% height:50%">
-  <img class="mySlides w3-animate-fading" src="./images/image_05.jpg" style="width:50% height:50%">
-</div>
-
-<script>
-var myIndex = 0;
-carousel();
-
-function carousel() {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
-    for (i = 0; i < x.length; i++) {
-       x[i].style.display = "none";  
-    }
-    myIndex++;
-    if (myIndex > x.length) {myIndex = 1}    
-    x[myIndex-1].style.display = "block";  
-    setTimeout(carousel, 3000);    
-}
-</script>
-
-
-
+  <div id="slideShowImages" style="weight:10% height:10px">
+    <img src="./images/image_01.jpg" alt="Slide 1" width="1000" height="300" />
+    <img src="./images/image_02.jpg" alt="Slide 2" width="1000" height="300" />
+    <img src="./images/image_03.jpg" alt="Slide 3" width="1000" height="300" />
+  </div>  
+  <script src="./js/slideShow.js"></script>
 </body>
+
 </html>
+
 
