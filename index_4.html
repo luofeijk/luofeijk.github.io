@@ -14,11 +14,11 @@
       border: 1px gray solid;
       background-color: lightgray;
     }
-  #section1 {padding-top:50px;height:500px;color: #fff; background-color: #1E88E5;}
-  #section2 {padding-top:50px;height:500px;color: #fff; background-color: #673ab7;}
-  #section3 {padding-top:50px;height:500px;color: #fff; background-color: #ff9800;}
-  #section4 {padding-top:50px;height:500px;color: #fff; background-color: #00bcd4;}
-  #section5 {padding-top:50px;height:500px;color: #fff; background-color: #009688;}
+  #section1 {padding-top:50px;min-height:500px;color: #fff; background-color: #1E88E5;}
+  #section2 {padding-top:50px;min-height:500px;color: #fff; background-color: #673ab7;}
+  #section3 {padding-top:50px;min-height:500px;color: #fff; background-color: #ff9800;}
+  #section4 {padding-top:50px;min-height:500px;color: #fff; background-color: #00bcd4;}
+  #section5 {padding-top:50px;min-height:500px;color: #fff; background-color: #009688;}
   </style>
 
   <!-- jQuery -->
@@ -96,32 +96,31 @@
   </script>
   
   <script>
-$(document).ready(function(){
-  // Add smooth scrolling to all links in navbar + footer link
-  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+  $(document).ready(function(){
+    // Add smooth scrolling to all links in navbar + footer link
+    $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
 
-   // Make sure this.hash has a value before overriding default behavior
-  if (this.hash !== "") {
+     // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
 
-    // Prevent default anchor click behavior
-    event.preventDefault();
+      // Store hash
+      var hash = this.hash;
 
-    // Store hash
-    var hash = this.hash;
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
 
-    // Using jQuery's animate() method to add smooth page scroll
-    // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-    $('html, body').animate({
-      scrollTop: $(hash).offset().top
-    }, 900, function(){
-
-      // Add hash (#) to URL when done scrolling (default click behavior)
-      window.location.hash = hash;
-      });
-    } // End if
-  });
-})
-</script>
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+        });
+      } // End if
+    });
+  })
+  </script>
 
   <!-- Page Content -->
   <div class="container-fluid" id="section1">
