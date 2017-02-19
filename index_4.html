@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge"> <!-- For intranet testing only, remove in production. -->
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+  <meta name="description" content="苏州 阳澄湖 大闸蟹 越澄 蟹庄">
+  <meta name="keywords" content="苏州,阳澄湖,大闸蟹,越澄,蟹庄">
+  <meta name="author" content="Shengchao Liu" >
+
+  <title>Slide Show</title>
+  <style>
+    #slideShowImages { /* The following CSS rules are optional. */
+      border: 1px gray solid;
+      background-color: lightgray;
+    }   
+  
+  #section1 {padding-top:50px;height:500px;color: #fff; background-color: #1E88E5;}
+  #section2 {padding-top:50px;height:500px;color: #fff; background-color: #673ab7;}
+  #section3 {padding-top:50px;height:500px;color: #fff; background-color: #ff9800;}
+  #section4 {padding-top:50px;height:500px;color: #fff; background-color: #00bcd4;}
+  #section5 {padding-top:50px;height:500px;color: #fff; background-color: #009688;}
+  </style>
+
+  <!-- jQuery -->
+  <script src="./js/jquery.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script src="./js/bootstrap.min.js"></script>
+  
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="60">
+
+  <nav class="navbar navbar-default navbar-fixed-top" style="background-color: #e3f2fd">
+  <div class="container-fluid">
+    
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">越澄人家</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="#section1"><b>关于越澄</b></a></li>
+      <li><a href="#section2"><b>阳澄湖大闸蟹文化企业文化</b></a></li>
+      <li><a href="#section3"><b>公司动态</b></a></li>
+      <li><a href="#section4"><b>人才招聘</b></a></li>
+      <li><a href="#section5"><b>合作洽谈</b></a></li>
+    </ul>
+  </div>
+  </nav>
+  
+<!-- Half Page Image Background Carousel Header -->
+  <header id="myCarousel" class="carousel slide" width=80%>
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+      <!-- Wrapper for Slides -->
+      <div class="carousel-inner">
+          <div class="item active">
+              <!-- Set the first background image using inline CSS below. -->
+              <div class="fill"><img src="./images/image_01.jpg" alt="Slide 1" width="100%" height="60%" /></div>
+          </div>
+          <div class="item">
+              <!-- Set the second background image using inline CSS below. -->
+              <div class="fill"><img src="./images/image_01.jpg" alt="Slide 2" width="100%" height="60%" /></div>
+          </div>
+          <div class="item">
+              <!-- Set the third background image using inline CSS below. -->
+              <div class="fill"><img src="./images/image_01.jpg" alt="Slide 3" width="100%" height="60%" /></div>
+                <!--                
+                <div class="carousel-caption">
+                    <h2>Caption 3</h2>
+                </div>
+                -->
+          </div>
+      </div>
+
+      <!-- Controls -->
+      <!--
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+          <span class="icon-prev"></span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+          <span class="icon-next"></span>
+      </a>
+      -->
+  </header>
+  <!-- This is javascript that runs image sliding -->
+  <script>
+  $('.carousel').carousel({
+      interval: 2000 //changes the speed
+  })
+  </script>
+
+  <!-- Page Content -->
+  <div class="container-fluid" id="section1">
+    <div class="row">
+      <h1>关于越澄</h1>
+      <p>待添加内容</p>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <hr width="100%">
+    </div>
+  </div>
+
+  <div class="container-fluid" id="section2">
+    <div class="row">
+      <h1>阳澄湖大闸蟹文化企业文化</h1>
+      <p>待添加内容</p>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <hr width="100%">
+    </div>
+  </div>
+
+  <div class="container-fluid" id="section3">
+    <div class="row">
+      <h1>公司动态</h1>
+      <p>待添加内容</p>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <hr width="100%">
+    </div>
+  </div>
+
+  <div class="container-fluid" id="section4">
+    <div class="row">
+      <h1>人才招聘</h1>
+      <p>待添加内容</p>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <hr width="100%">
+    </div>
+  </div>
+  
+  <div class="container-fluid" id="section5">
+    <div class="row">
+      <h1>合作洽谈</h1>
+      <p>待添加内容</p>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <hr width="100%">
+    </div>
+  </div>
+  
+  <!-- Footer -->
+  <footer class="container-fluid" align="center">
+    <p>友情链接</p>
+      <div class="row">
+      <table cellspacing="0" cellpadding="0" width="90%">
+      	<tr>
+      	  <td>
+      	    <ul class="list-unstyled">
+      	    	<li style="float:left; width:130px;">
+      	      	<a href="http://www.baidu.com/" target="_blank"><img src="./images/image_06.jpg" width="80" height="80" /></a><br>
+      	      	<a href="http://www.baidu.com/" target="_blank">链接1</a>
+      	      </li>
+      	    </ul>
+      	  </td>
+      	  <td>
+      	    <ul class="list-unstyled">
+      	    	<li style="float:left; width:130px;">
+      	      	<a href="http://www.baidu.com/" target="_blank"><img src="./images/image_06.jpg" width="80" height="80" /></a><br>
+      	      	<a href="http://www.baidu.com/" target="_blank">链接2</a>
+      	      </li>
+      	    </ul>
+      	  </td>
+      	  <td>
+      	    <ul class="list-unstyled">
+      	    	<li style="float:left; width:130px;">
+      	      	<a href="http://www.baidu.com/" target="_blank"><img src="./images/image_06.jpg" width="80" height="80" /></a><br>
+      	      	<a href="http://www.baidu.com/" target="_blank">链接3</a>
+      	      </li>
+      	    </ul>
+      	  </td>
+      	  <td>
+      	    <ul class="list-unstyled">
+      	    	<li style="float:left; width:130px;">
+      	      	<a href="http://www.baidu.com/" target="_blank"><img src="./images/image_06.jpg" width="80" height="80" /></a><br>
+      	      	<a href="http://www.baidu.com/" target="_blank">链接4</a>
+      	      </li>
+      	    </ul>
+      	  </td>
+      	</tr>
+      </table>
+      <p class="copyright text-muted">Copyright &copy; Your Website 2017</p>
+  </footer>
+  
+</body>
+
+</html>
+
+
