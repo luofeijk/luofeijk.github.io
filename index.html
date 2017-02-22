@@ -211,8 +211,10 @@
           <li data-target="#myCarousel2" data-slide-to="0" class="active"></li>
           <li data-target="#myCarousel2" data-slide-to="1"></li>
           <li data-target="#myCarousel2" data-slide-to="2"></li>
+          <li data-target="#myCarousel2" data-slide-to="3"></li>
+          <li data-target="#myCarousel2" data-slide-to="4"></li>
         </ol>
-        <div class="carousel-inner">
+        <div class="carousel-inner text-center">
           <div class="item active">
               <div class="fill"><img src="./images/chupin/1.jpg" alt="Slide 1" width="60%" /></div>
           </div>
@@ -222,6 +224,12 @@
           <div class="item">
               <div class="fill"><img src="./images/chupin/3.jpg" alt="Slide 3" width="60%" /></div>
           </div>
+          <div class="item">
+              <div class="fill"><img src="./images/chupin/4.jpg" alt="Slide 4" width="60%" /></div>
+          </div>
+          <div class="item">
+              <div class="fill"><img src="./images/chupin/5.jpg" alt="Slide 5" width="60%" /></div>
+          </div>
         </div>
         <a class="left carousel-control" href="#myCarousel2" data-slide="prev">
           <span class="icon-prev"></span>
@@ -230,6 +238,11 @@
             <span class="icon-next"></span>
         </a>
       </header>
+      <script>
+      $('.carousel2').carousel({
+          interval: 1000 //changes the speed
+      })
+      </script>
     </div>
   
   </div>
