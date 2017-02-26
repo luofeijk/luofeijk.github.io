@@ -29,6 +29,14 @@
   <script src="./js/bootstrap.min.js"></script>
   
   <link rel="stylesheet" href="./css/bootstrap.min.css">
+  
+  <!--引用百度地图API-->
+  <style type="text/css">
+      html,body{margin:0;padding:0;}
+      .iw_poi_title {color:#CC5522;font-size:14px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
+      .iw_poi_content {font:12px arial,sans-serif;overflow:visible;padding-top:4px;white-space:-moz-pre-wrap;word-wrap:break-word}
+  </style>
+  <script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
 
 </head>
 
@@ -84,16 +92,6 @@
                 -->
           </div>
       </div>
-
-      <!-- Controls -->
-      <!--
-      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-          <span class="icon-prev"></span>
-      </a>
-      <a class="right carousel-control" href="#myCarousel" data-slide="next">
-          <span class="icon-next"></span>
-      </a>
-      -->
   </header>
   <!-- This is javascript that runs image sliding -->
   <script>
@@ -315,27 +313,76 @@
       <div class="row-md-4"><h1>商务合作·联系我们</h1></div>
     </div>
     <div class="row">
-      <div class="row-md-8 text-center"><img src="./images/contact/title.jpg" width="96%"></div>
+      <img src="./images/contact/title.jpg" width="96%">
     </div>
     <div class="row">
-      <div class="col-md-4">越澄蟹业·阳澄湖大闸蟹能够多年来一直保证稳定的客源和新客户的计入，主要因为我们能提供优质的产品和良好的服务。作为一家集养殖和销售为一体的公司，让您吃的更健康、更美味是我们一直的追求。</div>
-    </div>
-    <div class="row">
-      <div class="col-md-4">电话：0512-65444277</div>
-    </div>
-    <div class="row">
-      <div class="col-md-4">传真：0512-65444277</div>
-    </div>
-    <div class="row">
-      <div class="col-md-4">手机：15298889380</div>
-    </div>
-    <div class="row">
-      <div class="col-md-4">地址：苏州市阳澄湖生态休闲旅游度假区清水村湖八鲜美食苑</div>
-    </div>
-    <div class="row">
-      <div class="col-md-4">微信二维码：<br /><img src="./images/erweima.jpg" width="50%"></div>
+      <div class="col-md-4">
+        <div class="row">
+          <div class="col-md-12">越澄蟹业·阳澄湖大闸蟹能够多年来一直保证稳定的客源和新客户的计入，主要因为我们能提供优质的产品和良好的服务。作为一家集养殖和销售为一体的公司，让您吃的更健康、更美味是我们一直的追求。</div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">电话：0512-65444277</div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">传真：0512-65444277</div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">手机：15298889380</div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">地址：苏州市阳澄湖生态休闲旅游度假区清水村湖八鲜美食苑</div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">微信二维码：<br /><img src="./images/erweima.jpg" width="50%"></div>
+        </div>
+      </div>
+      <div class="col-md-8">
+        <div style="width:90%;height:500px;border:#ccc solid 1px;" id="dituContent"></div>
+      </div>
     </div>
   </div>
+        <!---
+        <div style="width:697px;height:550px;border:#ccc solid 1px;" id="dituContent"></div>
+        -->
+  
+  <script type="text/javascript">
+    //创建和初始化地图函数：
+    function initMap(){
+        createMap();//创建地图
+        setMapEvent();//设置地图事件
+        addMapControl();//向地图添加控件
+    }
+    
+    //创建地图函数：
+    function createMap(){
+        var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
+        var point = new BMap.Point(120.765965,31.450447);//定义一个中心点坐标
+        map.centerAndZoom(point,15);//设定地图的中心点和坐标并将地图显示在地图容器中
+        window.map = map;//将map变量存储在全局
+    }
+    
+    //地图事件设置函数：
+    function setMapEvent(){
+        map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+        map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+        map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+        map.enableKeyboard();//启用键盘上下左右键移动地图
+    }
+    
+    //地图控件添加函数：
+    function addMapControl(){
+        //向地图中添加缩放控件
+   	var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+	   map.addControl(ctrl_nav);
+        //向地图中添加缩略图控件
+	   var ctrl_ove = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:1});
+	   map.addControl(ctrl_ove);
+        //向地图中添加比例尺控件
+	   var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+	   map.addControl(ctrl_sca);
+    }
+    initMap();//创建和初始化地图
+  </script>
   
   <!-- Footer -->
   <footer class="container-fluid">
